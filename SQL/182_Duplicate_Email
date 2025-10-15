@@ -1,0 +1,3 @@
+SELECT email FROM Person 
+GROUP BY email HAVING COUNT(*) > 1
+-- select emails from person, group the emails where theres more than one
