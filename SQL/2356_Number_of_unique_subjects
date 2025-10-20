@@ -1,0 +1,6 @@
+SELECT teacher_id, COUNT(DISTINCT subject_id) as cnt 
+/* select teacher ids with distinct subject ids */
+FROM teacher
+GROUP BY teacher_id 
+-- group rows by teacher so COUNT applies to each teacher separately
+-- DISTINCT ensures we don't double-count if a teacher-subject pair appears multiple times

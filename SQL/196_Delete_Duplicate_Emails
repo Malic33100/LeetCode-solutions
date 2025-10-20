@@ -1,0 +1,5 @@
+# Write your MySQL query statement below
+DELETE p1 FROM Person p1 -- delete the person 
+JOIN Person p2 -- create second alias to compare same id
+WHERE p1.email = p2.email AND p1.id > P2.ID -- where email is the same
+-- but id is newer, hence not the first id, saving only the first id

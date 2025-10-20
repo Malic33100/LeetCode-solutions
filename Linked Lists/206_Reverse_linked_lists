@@ -1,0 +1,11 @@
+class Solution(object):
+    def reverseList(self, head):
+       
+        current = head #pointer to move across list
+        prev = None #pointer to track last node
+        while current:
+            temp = current.next #store the next value before breaking the order 
+            current.next = prev #set the next node to the previous node, reversing the order
+            prev = current #set the previous node to the current node, moving previous forward
+            current = temp #set the current node to the last node next node to keep moving down the list
+        return prev #prev being the new head, return it 

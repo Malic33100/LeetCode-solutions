@@ -1,0 +1,9 @@
+--more rounded solution
+SELECT customer_number
+FROM Orders
+GROUP BY customer_number
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- problem defined as only one customer having highest number of orders
+-- sorted customers by order count, then only showed the  top customer 
